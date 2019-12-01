@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatOrNot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-Mj-IIF">
+                                <rect key="frame" x="42" y="132" width="330" height="489.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxm-47-m0U">
+                                <rect key="frame" x="156.5" y="699" width="101" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WSf-6U-qmg"/>
+                                </constraints>
+                                <state key="normal" title="Выбрать фото"/>
+                                <connections>
+                                    <action selector="pickPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jDA-Z6-gQi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Выберите фото" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO1-OE-0mz">
+                                <rect key="frame" x="42" y="648.5" width="330" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pxm-47-m0U" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3Hi-iy-8xt"/>
+                            <constraint firstItem="pxm-47-m0U" firstAttribute="top" secondItem="BO1-OE-0mz" secondAttribute="bottom" constant="30" id="7Jf-aH-AOO"/>
+                            <constraint firstItem="wtj-Mj-IIF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DHP-bR-nod"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pxm-47-m0U" secondAttribute="bottom" constant="133" id="E91-P8-iz7"/>
+                            <constraint firstItem="BO1-OE-0mz" firstAttribute="top" secondItem="wtj-Mj-IIF" secondAttribute="bottom" constant="27" id="FB6-eT-HKH"/>
+                            <constraint firstItem="BO1-OE-0mz" firstAttribute="leading" secondItem="wtj-Mj-IIF" secondAttribute="leading" id="QNI-rl-cpR"/>
+                            <constraint firstItem="wtj-Mj-IIF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="UQH-vG-2BC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wtj-Mj-IIF" secondAttribute="trailing" constant="42" id="ise-50-AZF"/>
+                            <constraint firstItem="BO1-OE-0mz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zFC-FC-7nN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="wtj-Mj-IIF" id="JLh-um-TQE"/>
+                        <outlet property="predictLabel" destination="BO1-OE-0mz" id="UAc-oy-j6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+</document>
